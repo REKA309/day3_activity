@@ -1,0 +1,151 @@
+1.Create JSON and use for in loop:
+// create json with name shopping
+var shopping={
+"wheat":"2",
+"rice":"10",
+"biscuit":"chocoflavour",
+"fruits":["apple","banana","mango"]
+};
+//for in loop using...
+for(var a in shopping)
+{
+console.log(a,":",shopping[a]);
+}
+
+2.Create resume data in JSON format:
+//create JSON with name resume
+var resume={
+"Name":"N.Reka",
+"Age":"22",
+"Place":"Chennai",
+"Qualification":"B.TECH IT",
+"YOP":"2021",
+"CGPA":"8.91",
+"College":"Panimalar Engineering College",
+"Skills":["Java","C","DBMS","Javascript","HTML"],
+"Projects":["Alumnini Tracking System using Android Studio",
+            "Bus Detection for visually impaired person using IOT"],
+};
+//for in loop using...
+for(var a in resume)
+{
+console.log(a,":",resume[a]);
+}
+
+3.About Window object,Screen Object ,Document object:
+i)Window Object:
+>The window object represents an open window in a browser.
+>Major properties of window object are innerWidth, innerHeight, length
+>To access property of window object
+Syntax: window.property
+To access method of window object
+Syntax: window.method()
+Methods of window objects:
+<html>
+    <head>
+        <title>hello</title>
+    </head>
+    <body>
+        <p>welocme everyone good morning</p>
+        <p id="id1"></p>
+        <p id="id2"></p>
+        <script>
+            window.alert("Safe")
+            let text="javascript"
+            let encode_text=window.btoa(text)
+            let decode_test=window.atob(encode_text)
+            window.document.getElementById("id1").innerHTML="Encode"+encode_text+"<br>"+"Decode"
+            +decode_test;
+            window.blur()
+            window.focus()
+           window.frameElement;
+           let length=window.history.length;
+           window.document.getElementById("id2").innerHTML=length;
+        </script>
+    </body>
+</html>
+Output:
+ welocme everyone good morning
+EncodeamF2YXNjcmlwdA==
+Decodejavascript
+1
+
+ii)Screen Object:
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Welcome</title>
+    </head>
+    <body>
+        <h1>Screen Object</h1>
+        <p>Screen object is used to inspect properties of screen on which current window rendered.</p>
+        <script>
+          window.document.write("<br>Screen height:"+screen.height);
+          window.document.write("<br>Screen Width:"+screen.width);
+          window.document.write("<br>Screen Available height:"+screen.availHeight);
+          window.document.write("<br>Screen Available Width:"+screen.availWidth);
+          window.document.write("<br>Screen Orientation:"+screen.orientation);
+          window.document.write("<br>Screen Pixel depth:"+screen.pixelDepth);
+          window.document.write("<br>Screen Color depth:"+screen.colorDepth);       
+        </script>
+    </body>
+</html>
+Output:
+Screen Object
+Screen object is used to inspect properties of screen on which current window rendered.
+
+
+Screen height:720
+Screen Width:1280
+Screen Available height:680
+Screen Available Width:1280
+Screen Orientation:[object ScreenOrientation]
+Screen Pixel depth:24
+Screen Color depth:24
+
+iii)Document Object:
+>JavaScript can change HTML elements and attributes.
+>JavaScript can add new and remove existing HTML elements and attributes.
+>JavaScript can change CSS styles.
+<!DOCTYPE html>
+<html>
+<head>
+<title> hello </title>
+</head>
+<body>
+<a href="">Click here</a>
+<p id ="abc"> Welcome</p>
+<img src="sam1.jpg" width="100" height="200"/>
+<script>
+let a=document.getElementsByTagName("head")
+console.log(a)
+console.log(document.body)
+console.log(document.head)
+console.log(document.anchors)
+console.log(document.documentElement)
+console.log(document.images)
+console.log(document.implementation)
+console.log(document.lastModified)
+console.log(document.title)
+console.log(document.scripts)
+</script>
+</body>
+</html>
+
+Output:
+browser-> inspect -> console:
+
+HTMLCollection(1)0: headlength: 1[[Prototype]]: HTMLCollection
+index.html:13 <body>​…​</body>​
+index.html:14 <head>​…​</head>​
+index.html:15 HTMLCollection(0)
+index.html:16 <html>​<head>​…​</head>​<body>​…​</body>​</html>​
+index.html:17 HTMLCollection(1)
+index.html:18 DOMImplementation
+index.html:19 01/12/2023 08:10:38
+index.html:20 hello
+index.html:21 HTMLCollection(2)
+index.html:22 http://127.0.0.1:5500/index.html
+index.html:52 Live reload enabled.
+ 
+
